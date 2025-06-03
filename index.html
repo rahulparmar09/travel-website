@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="#"><span>T</span>ravel</a>
+
+      <!-- Offcanvas Menu -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Travel Guide</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">Book</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="hotel.html">Hotel</a></li>
+                <li><a class="dropdown-item" href="#Packages">Packages</a></li>
+              </ul>
+            </li>
+
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#Services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Gallary">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#About">About</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Logout -->
+      <button id="logoutBtn" class="btn btn-outline-success me-3">
+        Logout
+      </button>
+
+      <!-- Toggler for Offcanvas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <!-- Navbar End -->
+
+
+  <!--bg-->
+  <section class="bg">
+    <div class="content container">
+      <h4>Welcome To <span id="print">World</span> </h4>
+      <h1>Visit <span>Dubai</span></h1>
+      <p>Some representative placeholder content for the first slide.</p>
+      <button type="button" class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+        Booking Now
+      </button>
+      <!-- Booking Modal -->
+      <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <div class="row g-0">
+                <!-- Left Image -->
+                <div class="col-md-6 d-none d-md-block">
+                  <img
+                    src="https://media.istockphoto.com/id/1457310219/photo/woman-walking-in-dubai-marina-at-sunset.jpg?s=612x612&w=0&k=20&c=rgvpTaOzwZMmKwSR5qEtx09GJv7FrWo1qymLXyVAKuI="
+                    class="img-fluid h-100 w-100" alt="Booking Image" style="object-fit: cover;">
+                </div>
+
+                <!-- Right Booking Form -->
+                <div class="col-md-6 p-4">
+                  <h5 class="modal-title mb-4" id="bookingModalLabel">Book Your Trip</h5>
+                  <form>
+                    <div class="mb-3">
+                      <label for="from" class="form-label">From</label>
+                      <input type="text" class="form-control" id="from" placeholder="Enter departure location" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="to" class="form-label">To</label>
+                      <input type="text" class="form-control" id="to" placeholder="Enter destination" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="date" class="form-label">Date</label>
+                      <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100">Book Now</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- counter -->
+  <div class="co">
+    <div class="container my-3">
+      <div class="row">
+        <div class="col-md-3 my-3 col-6">
+          <i class="fab fa-instagram fa-2x"></i>
+          <h3 class="counter" data-target="350">0</h3>
+          <p>Followers</p>
+        </div>
+        <div class="col-md-3 my-3 col-6">
+          <i class="fab fa-facebook fa-2x"></i>
+          <h3 class="counter" data-target="450">0</h3>
+          <p>Followers</p>
+        </div>
+        <div class="col-md-3 my-3 col-6">
+          <i class="fab fa-twitter fa-2x"></i>
+          <h3 class="counter" data-target="280">0</h3>
+          <p>Followers</p>
+        </div>
+        <div class="col-md-3 my-3 col-6">
+          <i class="fab fa-youtube fa-2x"></i>
+          <h3 class="counter" data-target="600">0</h3>
+          <p>Followers</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- packages -->
+  <section class="packages box" id="Packages">
+    <div class="container">
+      <div class="main-txt">
+        <h1><span>P</span>ackages</h1>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <img
+              src="https://media.istockphoto.com/id/616242056/photo/british-flag-big-ben-and-houses-of-parliament-london.jpg?s=612x612&w=0&k=20&c=3c5ZpafAsXAevRDs0dlTwn8wuErDjlYVqw1Cj0oRwMc="
+              alt="">
+            <div class="card-body">
+              <h3>United Kingdom</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eaque.</p>
+              <div class="star">
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <button type="button" class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Booking Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <img
+              src="https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg"
+              alt="">
+            <div class="card-body">
+              <h3>France</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eaque.</p>
+              <div class="star">
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <button type="button" class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Booking Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <img src="https://24media.az/uploads/posts/2024-01/myic_inline_22671.jpg" alt="">
+            <div class="card-body">
+              <h3>Italiya Daga</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eaque.</p>
+              <div class="star">
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <button type="button" class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Booking Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <img src="https://cdn1.tripoto.com/media/filter/tst/img/2245490/Image/1713284210_japan.jpg.webp" alt="">
+            <div class="card-body">
+              <h3>Japan</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eaque.</p>
+              <div class="star">
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <button type="button" class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Booking Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <img
+              src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/aa/03/9e/india-travel-with-leisure.jpg?w=1200&h=1200&s=1"
+              alt="">
+            <div class="card-body">
+              <h3>India</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eaque.</p>
+              <div class="star">
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <button type="button" class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Booking Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <img src="https://storage.united24media.com/thumbs/x/3/d1/c9b5496be23228d4f1071d8d6c071d13.jpg" alt="">
+            <div class="card-body">
+              <h3>russia</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, eaque.</p>
+              <div class="star">
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star ck"></i>
+                <i class="fa-solid fa-star "></i>
+                <i class="fa-solid fa-star "></i>
+              </div>
+              <h6>Price: <strong>$500</strong></h6>
+              <button type="button" class="btn btn-warning me-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Booking Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- services -->
+  <section class="services box" id="Services">
+    <div class="container">
+
+      <div class="main-txt">
+        <h1><span>S</span>ervices</h1>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <i class="fas fa-hotel"></i>
+            <div class="card-body">
+              <h3>Affordable Hotel</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, similique ad! Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <i class="fas fa-utensils"></i>
+            <div class="card-body">
+              <h3>Food & Drink</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, similique ad! Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <i class="fas fa-bullhorn"></i>
+            <div class="card-body">
+              <h3>Safty Guide</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, similique ad! Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <i class="fas fa-globe-asia"></i>
+            <div class="card-body">
+              <h3>Around The world</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, similique ad! Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <i class="fas fa-plane"></i>
+            <div class="card-body">
+              <h3>Fasted Travel</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, similique ad! Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-md-4 py-3 py-md-0">
+
+          <div class="card">
+            <i class="fas fa-hiking"></i>
+            <div class="card-body">
+              <h3>Adventures</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, similique ad! Lorem, ipsum dolor.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Gallary -->
+
+  <section class="gallary box" id="Gallary">
+    <div class="container">
+      <div class="main-txt">
+        <h1><span>G</span>allary</h1>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+
+        <div class="col-md-4 py-3 py-md-0">
+          <img
+            src="https://s7ap1.scene7.com/is/image/incredibleindia/rann-of-kutch-kutch-gujarat-1-attr-hero?qlt=82&ts=1726734017779"
+            class="img-fluid" alt="...">
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <img src="https://www.holidify.com/images/bgImages/SAN-FRANCISCO.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <img src="Turkey-1.jpg" class="img-fluid" alt="...">
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 30px;">
+
+        <div class="col-md-4 py-3 py-md-0">
+          <img
+            src="https://www.celebritycruises.com/blog/content/uploads/2023/01/historical-sites-in-france-the-arc-de-triomphe-paris-hero.jpg"
+            class="img-fluid" alt="...">
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <img src="https://www.planetware.com/photos-large/F/best-places-france-paris.jpg" class="img-fluid" alt="...">
+        </div>
+        <div class="col-md-4 py-3 py-md-0">
+          <img
+            src="https://strapi.stippl.io/strapi/large_Kyoto_Most_Beautiful_Traditional_Cities_in_Japan_6f33d011c8.jpg"
+            class="img-fluid" alt="...">
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="about box" id="About">
+    <div class="container">
+
+      <div class="main-txt">
+        <h1>About <span>Us</span></h1>
+      </div>
+
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md-6 py-3 py-md-0">
+          <div class="card">
+            <img src="Turkey-1.jpg" alt="">
+
+          </div>
+        </div>
+
+
+        <div class="col-md-6 py-3 py-md-0">
+          <h2>How Travel Agency Work</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae quod iusto laboriosam fugiat
+            jdjdnddhddquibusdam est, Lorem ipsum dolor sit amet hddet consectetur adipisicing elit. Laudantium harum sit
+            tempore! hgdRepudiandae odit qua fuga quo facere itaque nulla. lroenw nostrum optio, ut et facilis?
+            Veritatis earum autem aperiam excepturi minus cupiditate, pariatur</p>
+          <button id="about-btn">Read More...</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer" class="box">
+    <h1>T<span>avel</span></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore amet, odio aliquam praesentium, </p>
+    <div class="social-links">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-instagram"></i>
+    </div>
+    <div class="credit">
+      <p>Design By <a href="mailto:rahulparmar0u@gmail.com">Rahul Parmar</a></p>
+    </div>
+    <div class="copy">
+      <p>&copy;Copyright Rahul Parmar. All Right Reserved</p>
+    </div>
+  </footer>
+
+
+
+  <!-- js -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+
+    counters.forEach(counter => {
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+        const increment = target / 100;
+
+        if (current < target) {
+          counter.innerText = `${Math.ceil(current + increment)}`;
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCounter();
+    });
+
+
+    document.getElementById("logoutBtn").addEventListener("click", function () {
+      localStorage.removeItem("username");  // Sirf login session hatana
+      alert("Logged out successfully!");
+      window.location.href = "login.html";  // Login page pe redirect
+    });
+
+  </script>
+
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+  <script>
+    ScrollReveal().reveal('.box', {
+      origin: 'bottom',
+      distance: '100px',
+      duration: 900,
+      delay: 700,
+      easing: 'ease-in-out',
+      reset: false  // set to true if you want animation every time you scroll back
+    });
+  </script>
+
+
+</body>
+
+</html>

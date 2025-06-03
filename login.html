@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body class="bg-gradient-to-br from-yellow-400 to-red-500 flex items-center justify-center min-h-screen">
+
+    <section class="bg-white shadow-lg rounded-lg p-8 w-full max-w-md">
+        <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Login Form</h2>
+
+
+        <form class="space-y-4" id="login">
+
+            <input type="text" id="username" placeholder="username" required
+                class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <input type="password" id="password" placeholder="Password" required
+                class="w-full px-4 py-2 border border-indigo-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+            <p id="errorMsg" class="text-blue-800 text-sm">Don't have an account ? <a href="registration.html"
+                    class="text-[red]">Register</a></p>
+
+
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-md font-semibold transition duration-200">
+                Submit
+            </button>
+        </form>
+
+        <div id="popup"
+            class="hidden fixed top-6 right-6 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg animate-slide-down">
+            Login Successful!
+        </div>
+
+    </section>
+    <style>
+        @keyframes slide-down {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+
+        .animate-slide-down {
+            animation: slide-down 4s ease-in-out;
+            z-index: 999;
+        }
+    </style>
+
+    <script>
+        document.querySelector("#login").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let username = document.querySelector("#username").value.trim().toLowerCase();
+            let password = document.querySelector("#password").value;
+            const popup = document.getElementById("popup");
+
+
+            let storedPS = localStorage.getItem(username);
+
+            if (storedPS === null) {
+                alert("User not found");
+            } else {
+
+                // if(storedPS === password) {
+                //     alert("Login successsfully");
+                //     window.location.href = "home.html"
+                // }
+                if (storedPS === password) {
+                    // alert("Login successfully");
+                    popup.classList.remove("hidden");
+
+
+                    localStorage.setItem("username", username);
+
+                    setTimeout(() => {
+                        window.location.href = "index.html";
+                    }, 2000);
+
+
+                }
+
+                else {
+                    alert("Invalid Password");
+                    return;
+                }
+            }
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>
